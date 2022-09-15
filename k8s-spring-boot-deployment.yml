@@ -1,4 +1,3 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -15,7 +14,7 @@ spec:
     spec:
       containers:
         - name: springboot
-          image: pratiko96o/test-pipeline:latest
+          image: pratiko96o/test-pipeline
           ports:
             - containerPort: 8080
           env:
