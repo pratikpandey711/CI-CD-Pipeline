@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: springboot
-          image: pratiko96o/test-pipeline
+          image: pratiko96o/test-pipeline:test-pipeline
           ports:
             - containerPort: 8080
           env:
