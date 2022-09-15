@@ -1,19 +1,20 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test-pipeline
+  name: jhooq-springboot
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: test-pipeline
+      app: jhooq-springboot
   template:
     metadata:
       labels:
-        app: test-pipeline
+        app: jhooq-springboot
     spec:
       containers:
-        - name: pipeline
+        - name: springboot
           image: pratiko96o/test-pipeline:latest
           ports:
             - containerPort: 8080
@@ -24,11 +25,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: test-pipeline
+  name: jhooq-springboot
 spec:
   type: NodePort
   ports:
     - port: 80
       targetPort: 8080
   selector:
-    app: test-pipeline
+    app: jhooq-springboot
